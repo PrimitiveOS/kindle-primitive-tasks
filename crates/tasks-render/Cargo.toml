@@ -1,0 +1,15 @@
+[package]
+name = "tasks-render"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+tasks-core.workspace = true
+primitive-app.workspace = true
+primitive-ui.workspace = true
+
+chrono.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+kl-core.workspace = true

@@ -1,0 +1,13 @@
+[package]
+name = "tasks-desktop"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+tasks-core.workspace = true
+tasks-render.workspace = true
+primitive-app.workspace = true
+primitive-ui.workspace = true
+
+chrono.workspace = true
