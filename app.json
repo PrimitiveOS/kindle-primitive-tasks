@@ -11,7 +11,7 @@
     "productivity"
   ],
   "description": "Add tasks, organize them into lists, and check off what you finish. Today and Upcoming sort tasks by their due dates. Set a daily, weekday, or weekly repeat and undo the last completion. Works offline.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-tasks",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-tasks",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",

@@ -27,8 +27,8 @@ Open **Store** from Primitive Launcher and look for **Tasks**. [Install guide](I
 
 ## Simulate on a computer
 
-Keep [PrimitiveOS Tools](https://github.com/DoanNguyenTrong/kindle-primtitive-tools) and
-[Primitive Launcher](https://github.com/DoanNguyenTrong/kindle-primitive-launcher) beside this repository.
+Keep [PrimitiveOS Tools](https://github.com/PrimitiveOS/kindle-primtitive-tools) and
+[Primitive Launcher](https://github.com/PrimitiveOS/kindle-primitive-launcher) beside this repository.
 
 ```sh
 cargo test --offline --locked --workspace
