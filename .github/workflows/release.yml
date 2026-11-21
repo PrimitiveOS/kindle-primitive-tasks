@@ -12,4 +12,4 @@ jobs:
       dir: tasks
       binary-crate: tasks-kindle
       docs-licence-file: LICENSE-DOCS
-      sibling-tools-ref: 3d9026c1dc41e35bdd1f60d2d1435d5ac056f059
+      sibling-tools-ref: 779145c93a65b2fb8c104485af6489a8ef565de6
