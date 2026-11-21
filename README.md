@@ -1,39 +1,48 @@
-# Tasks for Kindle
+<div align="center">
 
-A local daily planner for PrimitiveOS. Open Today for overdue and due tasks, or switch to Inbox, Upcoming, or your named lists.
+<img src="icon.png" alt="Tasks icon" width="110">
 
-<table>
-  <tr>
-    <td align="center"><img src="docs/images/tasks-today.png" alt="Today with due and overdue tasks" width="250"><br><sub>Today with due and overdue tasks</sub></td>
-    <td align="center"><img src="docs/images/tasks-add.png" alt="Task details with the shared keyboard" width="250"><br><sub>Task details with the shared keyboard</sub></td>
-    <td align="center"><img src="docs/images/tasks-upcoming-dark.png" alt="Upcoming tasks in dark mode" width="250"><br><sub>Upcoming tasks in dark mode</sub></td>
-  </tr>
-</table>
+# Tasks
 
-The screenshots are from the desktop simulator.
+**Plan your day on Kindle**
 
-## How to use it
+[![Release](https://img.shields.io/github/v/release/PrimitiveOS/kindle-primitive-tasks?label=release)](https://github.com/PrimitiveOS/kindle-primitive-tasks/releases) [![Licence: PolyForm-Noncommercial-1.0.0](https://img.shields.io/badge/licence-PolyForm--Noncommercial--1.0.0-blue)](LICENSE) [![Store downloads](https://img.shields.io/badge/Store%20downloads-17-brightgreen)](https://primitiveos.github.io/kindle-primitive-catalog/v1/index.json)
 
-- Tap **Add task** and enter a title. Date, list, and repeat are optional.
-- Create named lists under **Lists**. Tap a task title to change its details.
-- Tap the checkbox to complete a task. Use **Undo** to reverse the most recent completion.
-- Choose daily, weekdays, or weekly repeat. An overdue occurrence moves forward to its next scheduled date when you complete it.
+[**Download**](https://github.com/PrimitiveOS/kindle-primitive-tasks/releases/latest) · [**Install guide**](INSTALL.md) · [**Changelog**](CHANGELOG.md)
 
-Tasks and your last completion are saved on the Kindle. Dates use the device’s local calendar.
+</div>
 
-## Install
+---
 
-Open **Store** from Primitive Launcher and look for **Tasks**. [Install guide](INSTALL.md)
+Add tasks, organize them into lists, and check off what you finish. Today and Upcoming sort tasks by their due dates. Set a daily, weekday, or weekly repeat and undo the last completion. Works offline.
 
-## Simulate on a computer
+## Quick start
 
-Keep [PrimitiveOS Tools](https://github.com/PrimitiveOS/kindle-primtitive-tools) and
-[Primitive Launcher](https://github.com/PrimitiveOS/kindle-primitive-launcher) beside this repository.
+After setting up PrimitiveOS, open **Store** from Primitive Launcher. Choose **Tasks** under **Apps**,
+tap **Get**, and open it from the Launcher grid. The [install guide](INSTALL.md) also covers the standalone USB package.
 
-```sh
-cargo test --offline --locked --workspace
-cargo run --offline --locked -p tasks-desktop -- build/previews
-```
+## Highlights
+
+- Add tasks, organize them into lists, and check off what you finish.
+- Today and Upcoming sort tasks by their due dates.
+- Set a daily, weekday, or weekly repeat and undo the last completion.
+
+## Status
+
+| Device | Status |
+|---|---|
+| Kindle Oasis 3 (1264 × 1680, firmware 5.18.2) | Tested on hardware |
+
+**Current version: 0.1.1.** Changes are in [CHANGELOG.md](CHANGELOG.md).
+
+## Downloads
+
+**17 downloads** from Store, as of 2026-11-21. Store shows the same count on the app page.
+The count is GitHub downloads of this app's release packages, from the [Store catalog](https://primitiveos.github.io/kindle-primitive-catalog/v1/index.json).
+
+## Documentation
+
+[Install guide](INSTALL.md) · [Changelog](CHANGELOG.md)
 
 ## Licence
 
