@@ -301,9 +301,10 @@ impl View {
             {
                 let check = check_bounds(index);
                 let pressed = canvas.control_pressed(check, false);
-                canvas.panel(check.inset(28), 6, 4, if pressed { 211 } else { 255 });
+                // A tap reverses the box: black, with a white check, while it is held.
+                canvas.panel(check.inset(28), 6, 4, if pressed { 0 } else { 255 });
                 if task.complete {
-                    canvas.icon(check.inset(32), CHECKMARK, 0);
+                    canvas.icon(check.inset(32), CHECKMARK, if pressed { 255 } else { 0 });
                 }
                 let date = match task.due {
                     Some(date) if date < self.today && !task.complete => {
