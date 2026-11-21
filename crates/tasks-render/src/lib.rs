@@ -237,7 +237,7 @@ impl View {
     }
 
     fn draw_home(&self, canvas: &mut Canvas) {
-        header(canvas, "Tasks", "Done");
+        header(canvas, "Tasks", "Exit");
         let current_tab = match self.section {
             Section::List(_) | Section::Completed => Section::Lists,
             other => other,
