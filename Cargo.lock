@@ -948,7 +948,7 @@ dependencies = [
 
 [[package]]
 name = "tasks-core"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "chrono",
  "serde",
@@ -956,7 +956,7 @@ dependencies = [
 
 [[package]]
 name = "tasks-desktop"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "chrono",
  "primitive-app",
@@ -967,7 +967,7 @@ dependencies = [
 
 [[package]]
 name = "tasks-kindle"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "primitive-app",
  "tasks-core",
@@ -976,7 +976,7 @@ dependencies = [
 
 [[package]]
 name = "tasks-render"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "chrono",
  "kl-core",
