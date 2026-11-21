@@ -128,41 +128,40 @@ pub fn press_key(editor: &mut Editor, x: f32, y: f32) -> Option<Press> {
 }
 
 pub fn field(canvas: &mut Canvas, bounds: Rect, label: &str, editor: &Editor, active: bool) {
+    // A tap reverses the field, as the kit's controls do: black with white ink while it is held.
     let pressed = canvas.control_pressed(bounds, false);
-    canvas.panel(
-        bounds,
-        16,
-        if active { 4 } else { 2 },
-        if pressed { 224 } else { 255 },
-    );
+    canvas.panel(bounds, 16, if active { 4 } else { 2 }, if pressed { 0 } else { 255 });
+    let ink = if pressed { 255 } else { 0 };
     let text = editor.string();
     let area = bounds.inset(18);
-    canvas.text(area, if text.is_empty() { label } else { &text }, BODY);
+    canvas.text(area, if text.is_empty() { label } else { &text }, BODY.ink(ink));
     if active {
         let before: String = editor.text.iter().take(editor.caret).collect();
         let caret = area.x + canvas.measure(&before, 36);
         if caret < area.right() - 2 {
-            canvas.fill(Rect::new(caret, area.y + 9, 3, area.h - 18), 0);
+            canvas.fill(Rect::new(caret, area.y + 9, 3, area.h - 18), ink);
         }
     }
 }
 
 pub fn row(canvas: &mut Canvas, area: Rect, title: &str, subtitle: &str) {
+    // A tap reverses the row, as the kit's rows do: black with white ink while it is held.
     let pressed = canvas.control_pressed(area, false);
-    canvas.panel(area, 20, 2, if pressed { 226 } else { 255 });
+    canvas.panel(area, 20, 2, if pressed { 0 } else { 255 });
+    let (ink, detail) = if pressed { (255, 170) } else { (0, 85) };
     let text = area.inset(18);
     if subtitle.is_empty() {
-        canvas.text(text, title, TextStyle::new(37).bold());
+        canvas.text(text, title, TextStyle::new(37).bold().ink(ink));
     } else {
         canvas.text(
             Rect::new(text.x, text.y, text.w, text.h / 2 + 7),
             title,
-            TextStyle::new(37).bold(),
+            TextStyle::new(37).bold().ink(ink),
         );
         canvas.text(
             Rect::new(text.x, text.y + text.h / 2 + 8, text.w, text.h / 2 - 8),
             subtitle,
-            CAPTION,
+            CAPTION.ink(detail),
         );
     }
 }
